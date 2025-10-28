@@ -69,10 +69,9 @@ class TestVarasto(unittest.TestCase):
         self.assertEqual(str(self.varasto), "saldo = 0, vielä tilaa 10")
 
 class Tyhja(unittest.TestCase):
-    def setUp(self):
-        self.varasto = Varasto(0)
 
     def test_virheellinen_varasto(self):
+        self.varasto = Varasto(0)
         self.assertEqual(self.varasto.tilavuus, 0)
 
     def test_virheellinen_alkusaldo(self):
