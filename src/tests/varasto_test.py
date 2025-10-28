@@ -51,7 +51,7 @@ class TestVarasto(unittest.TestCase):
 
         self.assertAlmostEqual(self.varasto.saldo, 0)
 
-    def test_otetaan_negatiivinen(self):
+    df test_otetaan_negatiivinen(self):
         self.varasto.lisaa_varastoon(5)
 
         self.varasto.ota_varastosta(-1)
