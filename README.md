@@ -1,3 +1,3 @@
 # ohtuvarasto
 
-! [GHA workflow badge] (https://github.com/venla-v/ohtuvarasto/workflows/CI/badge.svg)
+[![CI](https://github.com/venla-v/ohtuvarasto/actions/workflows/main.yml/badge.svg)](https://github.com/venla-v/ohtuvarasto/actions/workflows/main.yml)
