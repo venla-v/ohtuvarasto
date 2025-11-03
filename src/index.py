@@ -36,7 +36,7 @@ def main():
     olutta.lisaa_varastoon(1000.0)
     print(f"Olutvarasto: {olutta}")
 
-    print(f"Mehuvarasto: {mehua}")
+    print(f"Mehuvarasto lisätään tähän paljon tekstiä jotta pylint valittaa tstis: {mehua}")
     print("mehua.lisaa_varastoon(-666.0)")
     mehua.lisaa_varastoon(-666.0)
     print(f"Mehuvarasto: {mehua}")

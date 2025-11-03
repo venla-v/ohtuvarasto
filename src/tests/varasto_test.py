@@ -41,7 +41,7 @@ class TestVarasto(unittest.TestCase):
 
     def test_liikaa_tavaraa(self):
         self.varasto.lisaa_varastoon(20)
-        
+
         self.assertAlmostEqual(self.varasto.saldo, self.varasto.tilavuus)
 
     def test_ei_oteta_liikaa(self):
@@ -58,7 +58,7 @@ class TestVarasto(unittest.TestCase):
 
         self.assertAlmostEqual(self.varasto.saldo, 5)
 
-    def test_lisätään_negatiivinen(self):
+    def test_lisataan_negatiivinen(self):
         self.varasto.lisaa_varastoon(5)
 
         self.varasto.lisaa_varastoon(-1)
@@ -69,19 +69,23 @@ class TestVarasto(unittest.TestCase):
         self.assertEqual(str(self.varasto), "saldo = 0, vielä tilaa 10")
 
 class Tyhja(unittest.TestCase):
+    def setUp(self):
+        self.varasto = Varasto(0)
 
     def test_virheellinen_varasto(self):
         self.varasto = Varasto(0)
         self.assertEqual(self.varasto.tilavuus, 0)
 
-    def test_virheellinen_alkusaldo(self):
+class Virheellinen(unittest.TestCase):
+    def setUp(self):
         self.varasto = Varasto(10, -1)
 
+    def test_virheellinen_alkusaldo(self):
         self.assertEqual(self.varasto.saldo, 0)
 
-    def test_mahtuuko_alkusaldo(self):
+class Alku(unittest.TestCase):
+    def setUp(self):
         self.varasto = Varasto(5, 10)
 
+    def test_mahtuuko_alkusaldo(self):
         self.assertEqual(self.varasto.saldo, 5)
-
-    
